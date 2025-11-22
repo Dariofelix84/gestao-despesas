@@ -21,12 +21,20 @@ public class Despesa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
+
+    @Column(nullable = false)
     private String descricao;
+
+    @Column(nullable = false)
     private BigDecimal valor;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String categoria;
+
+    @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private LocalDate data;
 
     @CreationTimestamp
